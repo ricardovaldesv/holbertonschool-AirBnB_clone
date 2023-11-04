@@ -2,6 +2,8 @@
 '''This is the module for BaseModel Class'''
 import json
 import os
+from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -22,7 +24,7 @@ class FileStorage:
         serialized_objects = {key: obj.to_dict() for key, obj in FileStorage.__objects.items()}
         with open(FileStorage.__file_path, 'w', encoding='utf-8') as file:
             json.dump(serialized_objects, file, default=str)
-
+    
     def reload(self):
         from models.base_model import BaseModel
         """Deserializes the JSON file to __objects."""
@@ -30,7 +32,11 @@ class FileStorage:
             with open(FileStorage.__file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)
                 for key, value in data.items():
-                    class_name, obj_id = key.split('.')
-                    #cls = eval(class_name)
-                    obj = BaseModel(**value)
-                    FileStorage.__objects[key] = obj
+                    list_obj_id = key.split(".")
+                    obj_type = list_obj_id[0]
+                    if obj_type == "User":
+                        obj = User(**value)
+                        FileStorage.__objects[key] = obj
+                    elif obj_type == "BaseModel":
+                        obj = BaseModel(**value)
+                        FileStorage.__objects[key] = obj
