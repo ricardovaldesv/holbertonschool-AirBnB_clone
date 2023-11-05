@@ -40,5 +40,5 @@ class FileStorage:
                 data = json.load(file)
                 for key, value in data.items():
                     list_obj_id = key.split(".")
-                    obj_type = eval(list_obj_id[0])()
+                    obj_type = eval(list_obj_id[0])(**value)
                     FileStorage.__objects[key] = obj_type
