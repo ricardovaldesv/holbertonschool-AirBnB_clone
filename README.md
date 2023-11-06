@@ -65,10 +65,10 @@ The commands available for this command interpreter are:
 | *Command*  | *Usage* |
 | -------- | -------- |
 |*create*  | ***create*** <class_name>|
-|*show*    | ***show*** <class_name> <object_id> **;** <class_name>.***show***(<object_id>)()|
-|*destroy* | ***destroy*** <class_name> <object_id **;** <class_name>.***destroy***(<object_id>)()|
-| *all*    | **all** <class_name> **;** <class_name>.**all**()|
-| *update* | ***update*** <class_name> <object_id> <attribute name> "<attribute value>" **;** <class name>.***update***(<object_id>, <attribute name>, <attribute value>) **;** <class name>.***update***(<object_id>, <dictionary representation>)|
+|*show*    | ***show*** <class_name> <object_id> **|
+|*destroy* | ***destroy*** <class_name> <object_id **|
+| *all*    | **all** <class_name> **|
+| *update* | ***update*** <class_name> <object_id> <attribute name> "<attribute value>" **|
 | *help*   | ***help*** **;** ***help*** <command_name>|
 | *quit*   | ***quit*** |
 | *EOF*    | ***EOF*** **;** (ctrl + d)|
