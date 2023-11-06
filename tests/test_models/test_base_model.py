@@ -95,12 +95,12 @@ class TestBaseModelpep8(unittest.TestCase):
 
     def test_class(self):
         """check class docstrings"""
-        self.assertTrue(len(BaseModel.__doc__) > 0)"""
+        self.assertTrue(len(BaseModel.__doc__) > 0)
 
     def test_method(self):
         """check method docstrings"""
         for func in dir(BaseModel):
-            self.assertTrue(len(func.__doc__) > 0)
+            self.assertTrue(len(func.__doc__) > 0)"""
 
 
 if __name__ == "__main__":
