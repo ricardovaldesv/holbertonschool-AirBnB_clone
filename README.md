@@ -78,7 +78,7 @@ The commands available for this command interpreter are:
 
 ### Interactive Mode ⌨️
 
-#### Example 1: Using create, count and all commands
+#### Example 1: Using create and all commands
 ```
 root@e4aa8294c3aa:~/holberton/holbertonschool-AirBnB_clone# ./console.py 
 (hbnb) all
